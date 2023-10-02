@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --color-main:#EDB7AC;
+    --color-one:#616087;
+    --color-true:#514E53;
+    --font:'Roboto', sans-serif !important;
+}body{
+    font-family:var(--font) ;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-main);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+    font-weight: 700 !important;
+    overflow-y: scroll;
+    padding-right: env(safe-area-inset-right);
+}
