@@ -1451,6 +1451,25 @@ top: -10px;
         max-width: 100%;
         padding: 0;
     }
+    .header-top-nav-small-text li:nth-child(2) .icon {
+        height: 25px;
+    }
+    .header-top-nav-small-text  .icon {
+        height: 25px;
+    }
+    .count-hold {
+        position: absolute;
+        top: 10px;
+        height: 20px;
+        line-height: 18px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        overflow: hidden;
+        color: #edb8ad;
+    }
 }
 
 /* menu-991 */

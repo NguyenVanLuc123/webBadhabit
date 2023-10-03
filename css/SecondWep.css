@@ -1358,6 +1358,19 @@ top: -10px;
         max-width: 100%;
         padding: 0;
     }
+    .header-top-nav-small-text li .icon {
+        height: 25px;
+        width: 100%;
+    }
+    .header-top-nav-small-text li:nth-child(2) .icon {
+        height: 25px;
+        width: 100%;
+    }
+    .header-top-nav-small-text li:nth-child(1) span i {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
 }
 
 /* menu-991 */
