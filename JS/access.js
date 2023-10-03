@@ -148,7 +148,7 @@ function arrow() {
       header_list_lv2_991_1.classList.remove('header-list-lv2-991-show');
       header_list_lv2_991_1.addEventListener('animationend', function() {
         header_list_lv2_991_1.style.display = 'none';
-      }, { once: true });
+      });
     } else {
       header_list_lv2_991_1.style.display = 'block';
     }
@@ -170,7 +170,7 @@ function arrow() {
       header_list_lv2_991_2.classList.remove('header-list-lv2-991-show');
       header_list_lv2_991_2.addEventListener('animationend', function() {
         header_list_lv2_991_2.style.display = 'none';
-      }, { once: true });
+      });
     } else {
       header_list_lv2_991_2.style.display = 'block';
     }

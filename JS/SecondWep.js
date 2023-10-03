@@ -496,12 +496,9 @@ if (window.innerWidth <= 991) {
 window.addEventListener('resize', function() {
   if (window.innerWidth <= 991) {
     if (!arrowCalled) {
-      arrow();
       arrowCalled = true;
     }
-    // add the click event callback for header_arrow_down and header_arrow_down_2
-    header_arrow_down.addEventListener('click', header_arrow_down_callback);
-    header_arrow_down_2.addEventListener('click', header_arrow_down_2_callback);
+   
   }
   if (window.innerWidth > 991) {
     // remove the click event callback for header_arrow_down and header_arrow_down_2
@@ -513,7 +510,7 @@ window.addEventListener('resize', function() {
     // reset the arrowCalled flag to allow arrow() to be called later
     arrowCalled = false;
   }
-});
+},{ once: true });
 
 // header-arrow-down
 // Back_to-top

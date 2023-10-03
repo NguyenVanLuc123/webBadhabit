@@ -3,7 +3,10 @@
     box-sizing: border-box;
 }
 /* header-topbar-clearfix */
-
+.body{
+    overflow: hidden;
+    overflow-y: scroll;
+}
 .header-topbar-clearfix{
        display: none;
     width: 100%;
@@ -1453,9 +1456,11 @@ top: -10px;
     }
     .header-top-nav-small-text li:nth-child(2) .icon {
         height: 25px;
+        width: auto;
     }
     .header-top-nav-small-text  .icon {
         height: 25px;
+        width: auto;
     }
     .count-hold {
         position: absolute;
