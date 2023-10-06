@@ -1370,10 +1370,7 @@ top: -10px;
         width: 41%;
         margin-right: 1.415%;
     }
-    #collection-slide-2 .content .swiper-wrapper{
-        width: 100%;
-        flex-wrap: nowrap;
-    }
+   
     #collection-slide-2 .content .swiper-wrapper .swiper-slide {
           width: 41%;
           margin-right: 1.415%;
