@@ -148,7 +148,7 @@ function arrow() {
       header_list_lv2_991_1.classList.remove('header-list-lv2-991-show');
       header_list_lv2_991_1.addEventListener('animationend', function() {
         header_list_lv2_991_1.style.display = 'none';
-      });
+      }, { once: true });
     } else {
       header_list_lv2_991_1.style.display = 'block';
     }
@@ -170,7 +170,7 @@ function arrow() {
       header_list_lv2_991_2.classList.remove('header-list-lv2-991-show');
       header_list_lv2_991_2.addEventListener('animationend', function() {
         header_list_lv2_991_2.style.display = 'none';
-      });
+      }, { once: true });
     } else {
       header_list_lv2_991_2.style.display = 'block';
     }
@@ -179,10 +179,7 @@ function arrow() {
   header_arrow_down.addEventListener('click', header_arrow_down_callback); // assign the callback variable to the header_arrow_down click event
   header_arrow_down_2.addEventListener('click', header_arrow_down_2_callback); // assign the callback variable to the header_arrow_down_2 click event
 }
-if (window.innerWidth <= 991) {
-  
-    arrow();
-}
+
 window.addEventListener('resize', function() {
   if (window.innerWidth <= 991) {
     if (!arrowCalled) {
@@ -222,7 +219,7 @@ button_close_messenger.addEventListener('click',function(){
 })
 //messenger
 
-console.log(window.pageYOffset);
+
 // // Back_to-top
 function back_to_top(){
   window.addEventListener('scroll',function(){
@@ -246,13 +243,12 @@ function back_to_top(){
     let scrollPosition = window.pageYOffset;
     const scrollDuration = 1200;
     const scrollStep = -scrollPosition  / (scrollDuration / 35);
-    console.log(scrollStep);
+
   
     const scrollInterval = setInterval(() => {
       if (scrollPosition > -10) {
         window.scrollTo(0, scrollPosition);
         scrollPosition+=scrollStep;
-        console.log(scrollPosition);
       } else {
         clearInterval(scrollInterval);
       }

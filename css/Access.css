@@ -629,6 +629,27 @@ padding-bottom: 10px;
      .header-list-lv1 li:nth-child(3):hover .header-list-lv2 ul li{
          display: none;
     }
+    .footer-plugin{
+        display: none;
+    }
+    .footer-botton {
+       display: block;
+    }
+    .footer-botton .footer-access {
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+        padding-bottom: 20px;
+    }
+    .footer-botton .footer-address{
+        max-width: 70%;
+    }
+    .footer-address .logo-bct {
+        margin-left: 60%;
+    }
+   .footer-botton .footer-address .logo-bct img {
+        width: 100%;
+    }
 }
 /* menu-991 */
 .container-menu-991{

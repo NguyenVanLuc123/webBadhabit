@@ -3,9 +3,18 @@
     box-sizing: border-box;
 }
 /* header-topbar-clearfix */
-.body{
-    overflow: hidden;
+body{
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+    font-weight: 700 !important;
     overflow-y: scroll;
+    padding-right: env(safe-area-inset-right);
 }
 .header-topbar-clearfix{
        display: none;
@@ -708,6 +717,17 @@
     overflow: hidden;
     list-style: none;
     z-index: 1;
+    height: 600px;
+}
+#collection-slide-2 .swiper-container{
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+    height: 1050px;
 }
 .title1{
     width: 86%;
@@ -1048,17 +1068,18 @@
 /* section-collection */
   
 /* section-collection-slide-2 */
-#collection-slide-2 .content .swiper-wrapper{
-    width: 200%;
-    flex-wrap: wrap;
-}
-#collection-slide-2 .content .swiper-wrapper .swiper-slide{
-    flex-shrink:0;
-    width: 15.4%;
-    height: 100%;
+#collection-slide-2 .content .swiper-wrapper .swiper-slide .product-img a{
     position: relative;
-    transition-property: transform;
-    margin-right: 1.2%;
+    display: block;
+    padding-bottom: 200%;
+    padding-right: 200%;
+    width: 100%;
+}
+#collection-slide-2 .content .swiper-wrapper .swiper-slide .product-img a img{
+    width: 100%;
+}
+#collection-slide-2 .content .swiper-wrapper .swiper-slide .product-name-price{
+     width: 200%;
 }
 .sale-lable{
     position: absolute;
@@ -1250,6 +1271,9 @@ top: -10px;
     .flag{
         display:none;
     }
+    .product:hover .product-click{
+        display: none;
+    }
     .header-sidebar-left{
         display: none;
     }
@@ -1335,6 +1359,12 @@ top: -10px;
     }
     .section-collection .content .swiper-container{
         padding-bottom: 25px;
+    }
+    .section-collection .content .swiper-container .swiper-wrapper{
+        width: 123%;
+    }
+    .section-collection .content .swiper-container {
+        max-width: 80%;
     }
     .section-collection .content .swiper-container .swiper-slide{
         width: 41%;
@@ -1932,6 +1962,7 @@ position: relative;
 }
 .scroll-back-to-top i{
     font-size: 15px;
+    color: var(--color-main);
 }
 .scroll-back-to-top {
     scroll-behavior: smooth; 

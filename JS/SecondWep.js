@@ -1,114 +1,4 @@
-const button_right = document.getElementById('swiper-button-next-1');
-const div = document.getElementById('swiper-wrapper1');
-const button_left = document.getElementById('swiper-button-1');
-var dem=0;
-const button_right_2 = document.getElementById('swiper-button-next-2');
-const div_2 = document.getElementById('swiper-wrapper2');
-const button_left_2 = document.getElementById('swiper-button-2');
-var dem1=0;
-button_right.addEventListener('click', function() {
-  if(window.innerWidth <991&&dem==9){
-    dem++;
-  }
-    if(dem<9){
-    dem++;}
-    if(dem>0){button_left.style.opacity="1";}
-    if(dem<=9){
-        if(window.innerWidth >991){
-          var calcValue = -33.2 * dem +  '%';
-          div.style.transform = `translate3d(${calcValue}, 0, 0)`;
-          div.style.transitionDuration = "0.3s";
-          if(dem==9){button_right.style.opacity="0.7";}
-        }
-        else{
-          var calcValue = -42.5 * dem +  '%';
-          div.style.transform = `translate3d(${calcValue}, 0, 0)`;
-          div.style.transitionDuration = "0.3s";
-        }
-    }
-    if(window.innerWidth <991&&dem==10){
-      var calcValue = -40.8 * dem +  '%';
-          div.style.transform = `translate3d(${calcValue}, 0, 0)`;
-          div.style.transitionDuration = "0.3s";
-          if(dem==10){button_right.style.opacity="0.7";}
-    }
-});
 
-button_left.addEventListener('click', function() {
-    if(dem>0){
-    dem--;}
-    if(dem<9){button_right.style.opacity="1";}
-    if(dem==9&&window.innerWidth <991){button_right.style.opacity="1";}
-    if(dem>=0){
-      if(window.innerWidth >991){
-        var calcValue = -33.2 * dem +  '%';
-        div.style.transform = `translate3d(${calcValue}, 0, 0)`;
-        div.style.transitionDuration = "0.3s";
-      }
-      else{
-        var calcValue = -42.5 * dem +  '%';
-        div.style.transform = `translate3d(${calcValue}, 0, 0)`;
-        div.style.transitionDuration = "0.3s";
-      }}
-    if(dem==0){ button_left.style.opacity="0.7";}
-  });
-
-button_right_2.addEventListener('click', function() {
-  if(window.innerWidth>991){
-    if(dem1<3){
-    dem1++;}
-    if(dem1>0){button_left_2.style.opacity="1";}
-    if(dem1<=3){
-        var calcValue1 = -16.57 * dem1 +  '%';
-        div_2.style.transform = `translate3d(${calcValue1}, 0, 0)`;
-        div_2.style.transitionDuration = "0.3s";
-    }
-    if(dem1==3){button_right_2.style.opacity="0.7";}
-  }
-    else{
-      if(dem1<10){
-        dem1++;}
-        if(dem1>0){button_left_2.style.opacity="1";}
-        if(dem1<=10){
-          
-              var calcValue = -42.5 * dem1 +  '%';
-              div_2.style.transform = `translate3d(${calcValue}, 0, 0)`;
-              div_2.style.transitionDuration = "0.3s";
-        }
-        if(dem1==10){
-          var calcValue = -40.8 * dem1 +  '%';
-              div_2.style.transform = `translate3d(${calcValue}, 0, 0)`;
-              div_2.style.transitionDuration = "0.3s";
-              if(dem1==10){button_right_2.style.opacity="0.7";}
-        }
-    }
-});
-
-button_left_2.addEventListener('click', function() {
-  if(window.innerWidth>991){
-    if(dem1>0){
-    dem1--;}
-    if(dem1<3){button_right_2.style.opacity="1";}
-    if(dem1>=0){
-    var calcValue1 = -16.57 * dem1 + '%';
-    div_2.style.transform = `translate3d(${calcValue1}, 0, 0)`;
-    div_2.style.transitionDuration = "0.3s";}
-    if(dem1==0){ button_left_2.style.opacity="0.7";}
-  }
-    else{
-      if(dem1>0){
-        dem1--;}
-        if(dem1<=9){button_right_2.style.opacity="1";}
-        if(dem1>=0){
-            var calcValue = -42.5 * dem1 +  '%';
-            div_2.style.transform = `translate3d(${calcValue}, 0, 0)`;
-            div_2.style.transitionDuration = "0.3s";
-          }
-        if(dem1==0){ button_left_2.style.opacity="0.7";}
-    }
-  });
-
-  // hiệu ứng chuyển trên thanh xem quần áo
 
   // thay đổi giá sale cho sản phẩm
 function sale(){
@@ -490,15 +380,14 @@ function arrow() {
   header_arrow_down.addEventListener('click', header_arrow_down_callback); // assign the callback variable to the header_arrow_down click event
   header_arrow_down_2.addEventListener('click', header_arrow_down_2_callback); // assign the callback variable to the header_arrow_down_2 click event
 }
-if (window.innerWidth <= 991) {
-  arrow();
-}
 window.addEventListener('resize', function() {
   if (window.innerWidth <= 991) {
     if (!arrowCalled) {
+      arrow();
       arrowCalled = true;
     }
-   
+    header_arrow_down.addEventListener('click', header_arrow_down_callback);
+    header_arrow_down_2.addEventListener('click', header_arrow_down_2_callback);
   }
   if (window.innerWidth > 991) {
     // remove the click event callback for header_arrow_down and header_arrow_down_2
@@ -510,7 +399,7 @@ window.addEventListener('resize', function() {
     // reset the arrowCalled flag to allow arrow() to be called later
     arrowCalled = false;
   }
-},{ once: true });
+});
 
 // header-arrow-down
 // Back_to-top
