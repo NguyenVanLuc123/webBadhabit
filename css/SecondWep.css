@@ -12,8 +12,8 @@ body{
     overflow-y: auto;
     margin: 0px;
     font-weight: 700 !important;
-    overflow-y: scroll;
     padding-right: env(safe-area-inset-right);
+    
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -1201,6 +1201,10 @@ top: -10px;
     .header-list-lv2{
         display: none;
     }
+    .header-bot-nav  .header-list-lv1 > li:nth-child(2)::after,.header-bot-nav .header-list-lv1 > li:nth-child(3)::after{
+        display: none;
+    }
+ 
     .body-barcode img{
         width: 100%;
     }
@@ -1509,6 +1513,8 @@ background-color: #fff;
     animation-duration: 0.3s;
     background-color:#fff;
     display: none;
+    position: relative;
+    z-index: 0;
 }
 .header-list-lv2-991-1{
     width: 100%;
@@ -1516,6 +1522,8 @@ background-color: #fff;
     animation-duration: 0.3s;
     background-color:#fff;
     display: none;
+    position: relative;
+    z-index: 0;
 }
 .header-list-lv2-991-show{
     animation-name:header-menu-show;

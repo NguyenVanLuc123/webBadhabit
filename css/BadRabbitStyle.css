@@ -13,7 +13,6 @@ body{
     overflow-y: auto;
     margin: 0px;
     font-weight: 700 !important;
-    overflow-y: scroll;
     padding-right: env(safe-area-inset-right);
 }
 .header-topbar-clearfix{
@@ -194,7 +193,7 @@ body{
 }
 .icon {
     height:40px;
-    width: 100%;
+    width: auto;
 }
 .count-hold{
     position: absolute;
@@ -346,6 +345,7 @@ body{
     margin-top: -3px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
  }
 .header-bot-bar{
     z-index: 10;
